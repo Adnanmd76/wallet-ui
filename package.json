@@ -1,0 +1,30 @@
+{
+  "name": "wallet-ui",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A realtime multichain wallet using Sim APIs and Express.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "wallet",
+    "blockchain",
+    "cryptocurrency",
+    "evm",
+    "express",
+    "sim-api"
+  ],
+  "author": "Adnanmd76",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "numbro": "^2.3.6"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
