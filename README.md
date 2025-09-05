@@ -1,6 +1,8 @@
 # Wallet UI
 
-A modern, responsive, and user-friendly wallet interface built with React. This project provides a clean and intuitive UI for managing digital wallets, transactions, and user accounts.
+A modern, responsive, and user-friendly walletgit add .github/workflows/node.js.yml
+git commit -m "Update CI workflow with error handling and artifacts upload"
+git push origin feature/codesandbox-integration interface built with React. This project provides a clean and intuitive UI for managing digital wallets, transactions, and user accounts.
 
 ---
 
@@ -32,24 +34,3 @@ A modern, responsive, and user-friendly wallet interface built with React. This 
 1. **Clone the repository**:
    ```bash
 git clone https://github.com/Adnanmd76/wallet-ui.git
-## CodeSandbox Test
-This is a test for CodeSandbox integration.
-<<<<<<< HEAD
-## CodeSandbox and Vercel Integration Test
-
-This section tests the integration between CodeSandbox and Vercel.
-
-### Features Tested:
-- ✅ CodeSandbox preview generation
-- ✅ Vercel deployment
-- ✅ GitHub Actions CI/CD
-=======
->>>>>>> 9cdd12a (Test CodeSandbox integration)
-## CodeSandbox and Vercel Integration Test
-
-This section tests the integration between CodeSandbox and Vercel.
-
-### Features Tested:
-- ✅ CodeSandbox preview generation
-- ✅ Vercel deployment
-- ✅ GitHub Actions CI/CD
