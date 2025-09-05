@@ -1,0 +1,13 @@
+## Summary
+This PR adds complete integration for both CodeSandbox and Vercel.
+
+## Changes Made
+- Added `vercel.json` for proper Vercel deployment
+- Updated `package.json` with deploy script and homepage
+- Updated CI workflow to include all feature branches
+- Added integration test section in README
+
+## Expected Results
+- ✅ CodeSandbox should generate preview link in PR
+- ✅ Vercel should deploy successfully
+- ✅ GitHub Actions should pass all checks
