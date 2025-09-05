@@ -34,6 +34,17 @@ A modern, responsive, and user-friendly wallet interface built with React. This 
 git clone https://github.com/Adnanmd76/wallet-ui.git
 ## CodeSandbox Test
 This is a test for CodeSandbox integration.
+<<<<<<< HEAD
+## CodeSandbox and Vercel Integration Test
+
+This section tests the integration between CodeSandbox and Vercel.
+
+### Features Tested:
+- ✅ CodeSandbox preview generation
+- ✅ Vercel deployment
+- ✅ GitHub Actions CI/CD
+=======
+>>>>>>> 9cdd12a (Test CodeSandbox integration)
 ## CodeSandbox and Vercel Integration Test
 
 This section tests the integration between CodeSandbox and Vercel.

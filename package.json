@@ -1,13 +1,4 @@
-{"scripts": {
-    "start": "react-scripts start",
-      "build": "react-scripts build",
-        "test": "react-scripts test",
-          "eject": "react-scripts eject",
-            "lint": "eslint src --ext .js,.jsx",
-              "format": "prettier --write \"src/**/*.{js,jsx}\""
-              }
-              
-}
+{
   "name": "wallet-ui",
   "version": "1.0.0",
   "description": "A React-based Wallet UI project",
