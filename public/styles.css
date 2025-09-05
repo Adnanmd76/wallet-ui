@@ -1,0 +1,60 @@
+/* public/styles.css */
+
+/* (پہلے سے موجود تمام کوڈ رہنے دیں، اس کے بعد یہ نیا کوڈ شامل کریں) */
+
+/* Activity Tab Styles */
+.activity-list-item {
+    display: flex;
+        align-items: center;
+            padding: 16px 0;
+                border-bottom: 1px solid var(--color-border-secondary);
+                }
+
+                .activity-list-item:last-child { border-bottom: none; }
+
+                .activity-icon-placeholder {
+                    width: 38px;
+                        height: 38px;
+                            background-color: var(--color-placeholder-bg);
+                                border-radius: 50%;
+                                    display: flex;
+                                        align-items: center;
+                                            justify-content: center;
+                                                font-size: 1.5em; /* Bigger icon */
+                                                    margin-right: 12px;
+                                                        flex-shrink: 0;
+                                                        }
+
+                                                        .activity-info {
+                                                            flex-grow: 1;
+                                                                margin-right: 12px;
+                                                                }
+
+                                                                .activity-title {
+                                                                    margin: 0;
+                                                                        font-weight: 600;
+                                                                            color: var(--color-text-primary);
+                                                                            }
+
+                                                                            .activity-details {
+                                                                                margin: 0;
+                                                                                    font-size: 0.85em;
+                                                                                        color: var(--color-text-muted);
+                                                                                        }
+
+                                                                                        .activity-meta {
+                                                                                            text-align: right;
+                                                                                                flex-shrink: 0;
+                                                                                                }
+
+                                                                                                .activity-time {
+                                                                                                    margin: 0;
+                                                                                                        font-size: 0.9em;
+                                                                                                            color: var(--color-text-secondary);
+                                                                                                            }
+
+                                                                                                            .activity-date {
+                                                                                                                margin: 0;
+                                                                                                                    font-size: 0.75em;
+                                                                                                                        color: var(--color-text-subtle);
+                                                                                                                        }
