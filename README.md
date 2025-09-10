@@ -1,10 +1,31 @@
-# Wallet UI
+# 💳 Wallet UI
 
-A modern, responsive, and user-friendly walletgit add .github/workflows/node.js.yml
-git commit -m "Update CI workflow with error handling and artifacts upload"
-git push origin feature/codesandbox-integration interface built with React. This project provides a clean and intuitive UI for managing digital wallets, transactions, and user accounts.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.3.0-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
----
+A modern, responsive user interface for digital wallet applications built with React and Tailwind CSS.
+
+## ✨ Key Features
+
+### 🎨 User Interface
+- **Modern Design**: Clean, intuitive interface with smooth animations
+- **Dark/Light Mode**: Toggle between themes with system preference detection
+- **Responsive Layout**: Works seamlessly on desktop, tablet, and mobile
+- **Multi-language Support**: Ready for internationalization (i18n)
+
+### 💰 Wallet Functionality
+- **Balance Overview**: Real-time balance display with currency conversion
+- **Transaction History**: Detailed transaction list with filters and search
+- **Multi-currency Support**: Handle multiple cryptocurrencies and fiat currencies
+- **Quick Actions**: Send, receive, and exchange buttons with one-click access
+
+### 🔒 Security Features
+- **Biometric Authentication**: Fingerprint and face ID support
+- **PIN Protection**: Secure PIN entry with customizable attempts
+- **Session Management**: Auto-lock after inactivity
+- **Transaction Verification**: 2FA integration ready
 
 ## 🌟 Features
 
