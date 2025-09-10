@@ -13,6 +13,7 @@
     "deploy": "npm run build"
   },
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
@@ -21,7 +22,11 @@
     "eslint": "^8.0.0",
     "prettier": "^3.0.0"
   },
-  "keywords": ["react", "wallet", "ui"],
+  "keywords": [
+    "react",
+    "wallet",
+    "ui"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "homepage": "."
