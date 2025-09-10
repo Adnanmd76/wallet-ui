@@ -30,32 +30,39 @@ A modern, responsive user interface for digital wallet applications built with R
 ## 🌟 Features
 
 ### Core Features
-- **Dashboard**: Real-time overview of wallet balance, recent transactions, and spending analytics.
-- **Transaction Management**: Add, view, edit, and delete transactions with detailed information.
-- **User Authentication**: Secure login and registration system.
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices.
-- **Dark/Light Mode**: Toggle between dark and light themes for better user experience.
+- **Dashboard**: Real-time overview of wallet balance, recent transactions, and spending analytics
+- **Transaction Management**: Add, view, edit, and delete transactions with detailed information
+- **User Authentication**: Secure login and registration system
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Dark/Light Mode**: Toggle between dark and light themes for better user experience
 
 ### Technical Features
-- **React Components**: Modular and reusable React components for maintainability.
-- **State Management**: Efficient state handling using React hooks.
-- **API Integration**: Ready to integrate with backend APIs for real-time data.
-- **Form Validation**: Client-side validation for forms using React Hook Form.
-- **Unit Testing**: Comprehensive test coverage using Jest and React Testing Library.
+- **React Components**: Modular and reusable React components for maintainability
+- **State Management**: Efficient state handling using React hooks
+- **API Integration**: Ready to integrate with backend APIs for real-time data
+- **Form Validation**: Client-side validation for forms using React Hook Form
+- **Unit Testing**: Comprehensive test coverage using Jest and React Testing Library
 
----
+## 🛠 Tech Stack
+
+| Technology | Version | Description |
+|------------|---------|-------------|
+| React | 18.2.0 | UI library for building user interfaces |
+| React Router | 6.8.0 | Declarative routing for React apps |
+| Tailwind CSS | 3.3.0 | Utility-first CSS framework |
+| Redux Toolkit | 1.9.0 | State management library |
+| Axios | 1.4.0 | HTTP client for API requests |
+| React Icons | 4.10.0 | Popular icon library |
+| Chart.js | 4.3.0 | Charts for balance visualization |
 
 ## 🚀 Installation
--ui.git
 
 ### Prerequisites
 - Node.js (v18.x or higher)
 - npm or yarn
 
 ### Steps
+
 1. **Clone the repository**:
    ```bash
-git clone https://github.com/Adnanmd76/wallet-ui.git
-cd wallet-ui
-npm install
-npm start
+   git clone https://github.com/Adnanmd76/wallet-ui.git
