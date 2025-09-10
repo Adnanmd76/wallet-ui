@@ -1,3 +1,4 @@
+<img width="3200" height="3200" alt="Flat Vector Wallet UI Logo_20250905_180755_0000" src="https://github.com/user-attachments/assets/0930c7a4-5b91-4c4f-b604-3079bd22bc9c" />
 # 💳 Wallet UI
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
