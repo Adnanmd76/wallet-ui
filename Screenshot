@@ -1,0 +1,12 @@
+mkdir -p screenshots
+# پھر اپنی تصویریں (dashboard.png, transactions.png, darkmode.png) اس فولڈر میں ڈالیں
+# مثال: آپ فائل مینیجر سے copy/paste کریں یا
+# اگر اپنے مقامی کمپیوٹر پر ہیں تو
+cp /path/to/my/dashboard.png screenshots/dashboard.png
+cp /path/to/my/transactions.png screenshots/transactions.png
+cp /path/to/my/darkmode.png screenshots/darkmode.png
+
+# پھر گٹ میں add اور commit کریں
+git add screenshots/*.png
+git commit -m "docs: add demo screenshots for README"
+git push origin main
