@@ -1,7 +1,7 @@
 {
   "name": "wallet-ui",
   "version": "1.0.0",
-  "description": "A React-based Wallet UI project",
+  "description": "A React-based Wallet UI project with token contract integration",
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -10,29 +10,23 @@
     "eject": "react-scripts eject",
     "lint": "eslint src --ext .js,.jsx",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "deploy": "npm run build"
+    "deploy": "npm run build",
+    "generate-favicon": "node scripts/generate-favicon.js"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "ethers": "^6.7.1",
+    "web3": "^4.1.1"
   },
   "devDependencies": {
     "eslint": "^8.0.0",
-    "prettier": "^3.0.0"
+    "prettier": "^3.0.0",
+    "sharp": "^0.32.0"
   },
-  "keywords": ["react", "wallet", "ui"],
+  "keywords": ["react", "wallet", "ui", "blockchain", "token", "contract"],
   "author": "Your Name",
   "license": "MIT",
   "homepage": "."
-}
-{
-  "scripts": {
-    "generate-favicon": "node scripts/generate-favicon.js",
-    // ... other scripts
-  },
-  "devDependencies": {
-    "sharp": "^0.32.0",
-    // ... other dependencies
-  }
 }
