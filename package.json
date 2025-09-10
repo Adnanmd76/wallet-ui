@@ -11,7 +11,9 @@
     "lint": "eslint src --ext .js,.jsx",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "deploy": "npm run build",
-    "generate-favicon": "node scripts/generate-favicon.js"
+    "generate-favicon": "node scripts/generate-favicon.js",
+    "contract:deploy": "hardhat run scripts/deploy.js --network",
+    "contract:verify": "hardhat verify --network"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -23,10 +25,19 @@
   "devDependencies": {
     "eslint": "^8.0.0",
     "prettier": "^3.0.0",
-    "sharp": "^0.32.0"
+    "sharp": "^0.32.0",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.0"
   },
-  "keywords": ["react", "wallet", "ui", "blockchain", "token", "contract"],
-  "author": "Your Name",
+  "keywords": ["react", "wallet", "ui", "blockchain", "token", "contract", "dApp"],
+  "author": "Adnanmd76",
   "license": "MIT",
-  "homepage": "."
+  "homepage": "https://github.com/Adnanmd76/wallet-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Adnanmd76/wallet-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adnanmd76/wallet-ui/issues"
+  }
 }
