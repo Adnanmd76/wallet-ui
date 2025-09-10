@@ -25,6 +25,7 @@ git push origin feature/codesandbox-integration interface built with React. This
 ---
 
 ## 🚀 Installation
+-ui.git
 
 ### Prerequisites
 - Node.js (v18.x or higher)
@@ -34,3 +35,6 @@ git push origin feature/codesandbox-integration interface built with React. This
 1. **Clone the repository**:
    ```bash
 git clone https://github.com/Adnanmd76/wallet-ui.git
+cd wallet-ui
+npm install
+npm start
