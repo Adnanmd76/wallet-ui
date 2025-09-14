@@ -14,3 +14,14 @@ export function connectWallet(onFinishCallback) {
     userSession,
   });
 }
+export function getUserData() {
+  if (userSession.isUserSignedIn()) {
+    return userSession.loadUserData();
+  }
+  return null;
+}
+export function disconnectWallet() {
+  if (userSession.isUserSignedIn()) {
+    userSession.signUserOut(window.location.origin);
+  }
+}
