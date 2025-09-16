@@ -1,3 +1,4 @@
+`hello-world.clar`**
 ```clarity
 ;; hello-world.clar
 ;; This is a simple "Hello World" smart contract in Clarity.
@@ -14,5 +15,4 @@
     (define-read-only (say-hi (name (string-ascii 40)))
         ;; This function takes a name as input and returns a personalized greeting.
             (ok (concat "Hi, " name))
-            )
-            ```
+            )```
