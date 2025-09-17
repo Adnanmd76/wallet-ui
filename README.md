@@ -1,4 +1,25 @@
 # 💳 Wallet UI
+## 🔗 Crypto SDK Integration
+
+This project now includes integration with [Crypto SDK Guide](https://github.com/Crypto-SDKGuide) to support multichain wallet connectivity, secure encryption, and blockchain transactions.
+
+### 📁 SDK Modules
+
+- `sdk/wallet.js`: Connects wallets using `connectWallet()` from Crypto SDK
+- `sdk/blockchain.js`: Handles transactions and balance checks
+- `sdk/utils/encryption.js`: Encrypts and decrypts sensitive data using AES
+
+### 🚀 Usage Example
+
+```js
+import { initWallet } from './sdk/wallet';
+import { transferFunds, fetchBalance } from './sdk/blockchain';
+import { encryptData, decryptData } from './sdk/utils/encryption';
+
+const wallet = await initWallet();
+const balance = await fetchBalance(wallet.address);
+const tx = await transferFunds('0xReceiverAddress', 0.5);
+###
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
