@@ -1,0 +1,40 @@
+# 🎨 UI Components Guide
+
+This guide explains the key UI components used in Wallet UI, built with React and Tailwind CSS.
+
+---
+
+## 🔘 ConnectWalletButton
+
+- Triggers wallet connection using Crypto SDK
+- Displays connected wallet address
+- Shows loading and error states
+
+### Props:
+```ts
+interface ConnectWalletButtonProps {
+  onConnect: () => void;
+  isConnected: boolean;
+  address?: string;
+}
+interface BalanceCardProps {
+  balance: number;
+  currency: 'BTC' | 'ETH' | 'USD';
+  fiatRate?: number;
+}
+interface TransactionListProps {
+  transactions: Transaction[];
+  onFilterChange: (filter: FilterOptions) => void;
+}
+interface ExchangeModalProps {
+  fromCurrency: string;
+  toCurrency: string;
+  amount: number;
+  onExchange: () => void;
+}
+interface SendReceiveModalProps {
+  type: 'send' | 'receive';
+  address: string;
+  amount: number;
+  onConfirm: () => void;
+}
