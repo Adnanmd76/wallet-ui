@@ -1,0 +1,37 @@
+<!-- views/wallet.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wallet Balance Checker</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Check Your Wallet Balance</h1>
+  <form id="balanceForm">
+    <label for="address">Wallet Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="chain">Select Blockchain:</label>
+    <select id="chain" name="chain">
+      <option value="eth">Ethereum</option>
+      <option value="btc">Bitcoin</option>
+      <option value="sol">Solana</option>
+    </select>
+
+    <button type="submit">Check Balance</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    document.getElementById("balanceForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const address = document.getElementById("address").value;
+      const chain = document.getElementById("chain").value;
+      const res = await fetch(`/api/wallet/${chain}/${address}`);
+      const data = await res.json();
+      document.getElementById("result").innerText = `Balance on ${data.chain}: ${data.balance}`;
+    });
+  </script>
+</body>
+</html>
