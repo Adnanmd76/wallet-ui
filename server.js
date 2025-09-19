@@ -1,4 +1,32 @@
 // server.js
+const express = require("express");
+const app = express();
+const path = require("path");
+require("dotenv").config();
+
+// Static files and views
+app.use(express.static(path.join(__dirname, "public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
+// Body parser
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Routes
+const walletRoutes = require("./routes/walletRoutes");
+app.use("/api/wallet", walletRoutes);
+
+// Default route
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+// Server start
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
 import express from 'express';
 import numbro from 'numbro';
