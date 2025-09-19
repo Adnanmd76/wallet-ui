@@ -1,0 +1,71 @@
+/* public/styles.css */
+
+/* Global Settings */
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: 'Noto Naskh Arabic', serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Scheherazade', serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #005f73;
+}
+
+/* Form Elements */
+form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input,
+select,
+button {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Button Styles */
+button {
+  background-color: #005f73;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #0a9396;
+}
+
+/* Result Display */
+#result {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  }
