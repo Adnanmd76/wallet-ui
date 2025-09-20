@@ -1,35 +1,55 @@
-import { useState, useEffect } from 'react';
-import { getProvider } from './provider';
+import { useEffect, useState } from 'react';
 import { ethers } from 'ethers';
+import { getProvider } from './provider';
 
-export const useWallet = () => {
-  const [address, setAddress] = useState<string | null>(null);
-  const [isConnected, setIsConnected] = useState(false);
-  const [balance, setBalance] = useState<string | null>(null);
-  const [chainId, setChainId] = useState<number | null>(null);
+interface WalletState {
+  address: string | null;
+  connected: boolean;
+  balance: string | null;
+  chainId: number | null;
+}
+
+interface WalletOptions {
+  chain?: string;
+  useWalletConnect?: boolean;
+}
+
+export const useWallet = (options: WalletOptions = {}) => {
+  const [wallet, setWallet] = useState<WalletState>({
+    address: null,
+    connected: false,
+    balance: null,
+    chainId: null,
+  });
 
   useEffect(() => {
     const connectWallet = async () => {
       try {
-        const provider = getProvider();
-        await provider.send('eth_requestAccounts', []);
+        const provider = await getProvider(options);
         const signer = provider.getSigner();
-        const userAddress = await signer.getAddress();
-        const userBalance = await provider.getBalance(userAddress);
+        const address = await signer.getAddress();
+        const balance = await provider.getBalance(address);
         const network = await provider.getNetwork();
 
-        setAddress(userAddress);
-        setBalance(ethers.utils.formatEther(userBalance));
-        setChainId(network.chainId);
-        setIsConnected(true);
-      } catch (error) {
-        console.error('Wallet connection failed:', error);
-        setIsConnected(false);
+        setWallet({
+          address,
+          connected: true,
+          balance: ethers.utils.formatEther(balance),
+          chainId: network.chainId,
+        });
+      } catch (err) {
+        console.error('Wallet connection failed:', err);
+        setWallet({
+          address: null,
+          connected: false,
+          balance: null,
+          chainId: null,
+        });
       }
     };
 
     connectWallet();
-  }, []);
+  }, [options.chain, options.useWalletConnect]);
 
-  return { address, isConnected, balance, chainId };
+  return wallet;
 };
