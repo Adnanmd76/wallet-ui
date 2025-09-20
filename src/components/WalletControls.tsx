@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { useWallet } from '../web3/hooks';
+import NetworkToggle from './NetworkToggle';
 
 const chains = ['ethereum', 'polygon', 'bsc', 'avalanche', 'fantom'];
 
 const WalletControls = () => {
   const [selectedChain, setSelectedChain] = useState('ethereum');
   const [useWalletConnect, setUseWalletConnect] = useState(false);
+  const [network, setNetwork] = useState<'mainnet' | 'testnet'>('mainnet');
 
-  const wallet = useWallet({ chain: selectedChain, useWalletConnect });
+  const wallet = useWallet({ chain: selectedChain, useWalletConnect, network });
 
   return (
     <div className="p-4 bg-white dark:bg-gray-900 rounded shadow space-y-4">
@@ -36,6 +38,8 @@ const WalletControls = () => {
           <span>Use WalletConnect</span>
         </label>
       </div>
+
+      <NetworkToggle chain={selectedChain} onChange={setNetwork} />
 
       <div className="mt-4 text-sm">
         {wallet.connected ? (
