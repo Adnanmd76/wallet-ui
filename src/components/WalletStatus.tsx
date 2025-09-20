@@ -1,14 +1,18 @@
 import React from 'react';
 import { useWallet } from '../web3/hooks';
 
-const WalletStatus: React.FC = () => {
-  const { address, isConnected } = useWallet();
+const WalletStatus = () => {
+  const { address, connected, balance, chainId } = useWallet();
 
-  if (!isConnected) return null;
+  if (!connected) {
+    return <div className="text-red-500">Wallet not connected</div>;
+  }
 
   return (
-    <div style={{ padding: '8px', backgroundColor: '#f0f0f0', borderRadius: '6px' }}>
-      <strong>Wallet Connected:</strong> {address}
+    <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded shadow">
+      <p><strong>Address:</strong> {address}</p>
+      <p><strong>Balance:</strong> {balance} ETH</p>
+      <p><strong>Chain ID:</strong> {chainId}</p>
     </div>
   );
 };
