@@ -1,3 +1,4 @@
+
 // server.js
 const express = require("express");
 const app = express();
@@ -40,7 +41,7 @@ const SIM_API_KEY = process.env.SIM_API_KEY;
 
 // Check if the API key is set
 if (!SIM_API_KEY) {
-    console.error("FATAL ERROR: SIM_API_KEY is not set in your environment variables.");
+    console.error("FATAL ERROR: SIM_API_KEY is not set in your environment variables. - server.js:16");
     process.exit(1); // Exit the process if no API key is found
 }
 
@@ -74,7 +75,7 @@ app.get('/', async (req, res) => {
     // Only fetch data if a wallet address is provided
     if (walletAddress) {
         try {
-            console.log(`Fetching balances for wallet: ${walletAddress}`);
+            console.log(`Fetching balances for wallet: ${walletAddress} - server.js:50`);
             // Construct the API URL for the Balances API
             const balancesApiUrl = `https://api.sim.xyz/v1/wallets/${walletAddress}/balances?chainId=1`; // chainId=1 for Ethereum Mainnet
             
@@ -95,7 +96,7 @@ app.get('/', async (req, res) => {
             }
 
             const balancesData = await balancesResponse.json();
-            console.log("Balances API Response received successfully.");
+            console.log("Balances API Response received successfully. - server.js:71");
             
             // The API response structure might be { results: [...] } or just an array
             // We'll check for that and assign the tokens array accordingly
@@ -131,7 +132,7 @@ app.get('/', async (req, res) => {
                 };
             });
         } catch (error) {
-            console.error("Failed to fetch token balances:", error.message);
+            console.error("Failed to fetch token balances: - server.js:107", error.message);
             // In case of an error, we'll keep tokens empty and show an error message on the frontend
             totalWalletUSDValue = 'Error';
         }
@@ -143,7 +144,7 @@ app.get('/', async (req, res) => {
     // Only fetch data if wallet address is provided and tab is 'activity'
     if (walletAddress && tab === 'activity') {
         try {
-            console.log(`Fetching activities for wallet: ${walletAddress}`);
+            console.log(`Fetching activities for wallet: ${walletAddress} - server.js:119`);
             // Construct the API URL for the Activity API
             const activityApiUrl = `https://api.sim.xyz/v1/wallets/${walletAddress}/activity?chainId=1`;
 
@@ -157,7 +158,7 @@ app.get('/', async (req, res) => {
             }
 
             const activityData = await activityResponse.json();
-            console.log("Activity API Response received successfully.");
+            console.log("Activity API Response received successfully. - server.js:133");
 
             // The API response is usually an array of activities
             activities = activityData.results || activityData || [];
@@ -190,7 +191,7 @@ app.get('/', async (req, res) => {
             });
 
         } catch (error) {
-            console.error("Failed to fetch activity data:", error.message);
+            console.error("Failed to fetch activity data: - server.js:166", error.message);
             // In case of error, activities array will remain empty
         }
     }
@@ -201,7 +202,7 @@ app.get('/', async (req, res) => {
     // Only fetch data if wallet address is provided and tab is 'collectibles'
     if (walletAddress && tab === 'collectibles') {
         try {
-            console.log(`Fetching collectibles for wallet: ${walletAddress}`);
+            console.log(`Fetching collectibles for wallet: ${walletAddress} - server.js:177`);
             // Construct the API URL for the Collectibles API
             const collectiblesApiUrl = `https://api.sim.xyz/v1/wallets/${walletAddress}/collectibles?chainId=1`;
 
@@ -215,7 +216,7 @@ app.get('/', async (req, res) => {
             }
 
             const collectiblesData = await collectiblesResponse.json();
-            console.log("Collectibles API Response received successfully.");
+            console.log("Collectibles API Response received successfully. - server.js:191");
 
             // The API response is usually an array of collectibles
             collectibles = collectiblesData.results || collectiblesData || [];
@@ -243,7 +244,7 @@ app.get('/', async (req, res) => {
             });
 
         } catch (error) {
-            console.error("Failed to fetch collectibles data:", error.message);
+            console.error("Failed to fetch collectibles data: - server.js:219", error.message);
             // In case of error, collectibles array will remain empty
         }
     }
@@ -263,5 +264,5 @@ app.get('/', async (req, res) => {
 
 // Start the server on port 3001
 app.listen(3001, () => {
-    console.log(`Server running at http://localhost:3001`);
+    console.log(`Server running at http://localhost:3001 - server.js:239`);
 });

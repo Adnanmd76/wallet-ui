@@ -5,7 +5,13 @@
   "description": "A Modern React-based Web3 Wallet UI",
   "author": "AdnanMd76",
   "license": "MIT",
-  "keywords": ["react", "wallet", "ui", "web3", "crypto"],
+  "keywords": [
+    "react",
+    "wallet",
+    "ui",
+    "web3",
+    "crypto"
+  ],
   "dependencies": {
     "@alchemy/alchemy-sdk": "^2.6.2",
     "@uniswap/v3-sdk": "^3.10.0",
@@ -50,3 +56,4 @@
     "tailwindcss": "^3.4.1"
   }
 }
+```
