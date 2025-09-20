@@ -1,38 +1,52 @@
 {
   "name": "wallet-ui",
   "version": "1.0.0",
-  "description": "A React-based Wallet UI project",
-  "main": "src/index.js",
+  "private": true,
+  "description": "A Modern React-based Web3 Wallet UI",
+  "author": "AdnanMd76",
+  "license": "MIT",
+  "keywords": ["react", "wallet", "ui", "web3", "crypto"],
+  "dependencies": {
+    "@alchemy/alchemy-sdk": "^2.6.2",
+    "@uniswap/v3-sdk": "^3.10.0",
+    "@wagmi/core": "^1.4.12",
+    "@walletconnect/modal": "^2.6.2",
+    "@web3auth/base": "^7.3.1",
+    "@web3auth/modal": "^7.3.1",
+    "axios": "^1.6.2",
+    "ethers": "^6.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "socket.io-client": "^4.7.4",
+    "viem": "^1.19.9",
+    "web-vitals": "^2.1.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js,.jsx",
-    "format": "prettier --write \"src/**/*.{js,jsx}\"",
-    "deploy": "npm run build"
+    "eject": "react-scripts eject"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
-  "devDependencies": {
-    "eslint": "^8.0.0",
-    "prettier": "^3.0.0"
-  },
-  "keywords": ["react", "wallet", "ui"],
-  "author": "Your Name",
-  "license": "MIT",
-  "homepage": "."
-}
-{
-  "scripts": {
-    "generate-favicon": "node scripts/generate-favicon.js",
-    // ... other scripts
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "sharp": "^0.32.0",
-    // ... other dependencies
+    "tailwindcss": "^3.4.1"
   }
 }
