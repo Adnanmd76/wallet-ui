@@ -1,0 +1,40 @@
+// routes/walletRoutes.js
+const express = require("express");
+const router = express.Router();
+const {
+  getEthBalance,
+  getBitcoinBalance,
+  getSolanaBalance
+} = require("../services/blockchainService");
+
+// Ethereum-compatible chains
+router.get("/eth/:address", async (req, res) => {
+  try {
+    const balance = await getEthBalance(req.params.address);
+    res.json({ chain: "Ethereum", balance });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Bitcoin
+router.get("/btc/:address", async (req, res) => {
+  try {
+    const balance = await getBitcoinBalance(req.params.address);
+    res.json({ chain: "Bitcoin", balance });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// Solana
+router.get("/sol/:address", async (req, res) => {
+  try {
+    const balance = await getSolanaBalance(req.params.address);
+    res.json({ chain: "Solana", balance });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+module.exports = router;
